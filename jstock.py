@@ -1,4 +1,5 @@
 # coding: utf-8
+# reffered from https://github.com/ynakayama/sandbox/blob/master/python/pandas/jpstock.py
 
 import sys
 import datetime
