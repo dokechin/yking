@@ -30,23 +30,17 @@ class JpStock:
                 break
             results.append(tables[1])
             p += 1
-        print ("hello 1")
         result = pd.concat(results, ignore_index=True)
 
-        print ("hello 2",result)
 
         result.columns = [
             'Date', 'Open', 'High', 'Low', 'Close']
 
-        print ("hello 3")
 
         result['Date'] = pd.to_datetime(result['Date'], format='%Y年%m月%d日')
-        print ("hello 4")
 
         result = result.set_index('Date')
-        print ("hello 5")
         result = result.sort_index()
-        print ("hello 6")
 
         return result.asfreq('B')
 
